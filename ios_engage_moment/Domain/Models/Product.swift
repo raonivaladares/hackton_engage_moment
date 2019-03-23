@@ -1,18 +1,10 @@
-//
-//  Product.swift
-//  ios_engage_moment
-//
-//  Created by Raoni de Oliveira Valadares on 23/03/19.
-//  Copyright © 2019 Raoni de Oliveira Valadares. All rights reserved.
-//
-
 import Foundation
 
 struct Product {
     let id: String
     let name: String
     let brandID: String
-    let ShortDescription: String
+    let shortDescription: String
 }
 
 //{
@@ -41,3 +33,5 @@ struct Product {
 //    “created_at”: “20190314T000915.000Z”,
 //    “updated_at”: “20190315T000915.000Z”
 //}
+
+

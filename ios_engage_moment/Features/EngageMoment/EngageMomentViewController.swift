@@ -68,12 +68,14 @@ class EngageMomentViewController: UIViewController {
     
     func configure(viewModel: EngageMomentViewModel) {
         if viewModel.isLoading {
-            containerView.isHidden = true
             loadingIndicator.startAnimating()
+            containerView.isHidden = true
         } else {
             loadingIndicator.stopAnimating()
             containerView.isHidden = false
         }
+        nameLabel.text = viewModel.productName
+        descriptionLabel.text = viewModel.productDescription
     }
 }
 
@@ -110,13 +112,11 @@ extension EngageMomentViewController {
         nameLabel.text = "Product name"
         nameLabel.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         
-        descriptionLabel.text = "alksdjkladj alsjdaklsdjk alsjdkalsdjkl alsjdkalsdjkl aslkdjaklsdj aalksjdladsjkl aslkdj alkdsjklajsd lkajsdklajdklaj dlkasjdklajsdkl ajdslkdjaklsdjkladjklasdjkl aslkdjkalsdjkla aslkdjakldjkaldjkaldjkals alskjdkald"
         descriptionLabel.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         descriptionLabel.numberOfLines = 0
         
         loadingIndicator.hidesWhenStopped = true
         loadingIndicator.style = UIActivityIndicatorView.Style.gray
-        loadingIndicator.startAnimating();
         
         actionButton.backgroundColor = .black
         actionButton.setTitle("BUY", for: .normal)

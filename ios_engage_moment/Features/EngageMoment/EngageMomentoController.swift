@@ -1,4 +1,5 @@
 import Foundation
+import Result
 
 final class EngageMomentController {
     let viewController: EngageMomentViewController
@@ -10,16 +11,14 @@ final class EngageMomentController {
         let viewModel = EngageMomentViewModel(state: .loading)
         viewController.configure(viewModel: viewModel)
         
-        engageMomentUseCases.requestMoments()
-    }
-}
-
-protocol EngageMomentUseCases {
-    func requestMoments()
-}
-
-final class EngageMomentUseCasesImp: EngageMomentUseCases {
-    func requestMoments() {
-        
+        engageMomentUseCases.requestMoments { result in
+            result.analysis(ifSuccess: { engage in
+                let viewModel = EngageMomentViewModel(state: .showMoment(engage))
+                viewController.configure(viewModel: viewModel)
+            }, ifFailure: { error in
+                let viewModel = EngageMomentViewModel(state: .showError)
+                viewController.configure(viewModel: viewModel)
+            })
+        }
     }
 }

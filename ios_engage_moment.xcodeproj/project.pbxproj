@@ -16,6 +16,11 @@
 		84C262B72246803D00E48A69 /* ios_engage_momentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C262B62246803D00E48A69 /* ios_engage_momentUITests.swift */; };
 		84C262C72246876A00E48A69 /* EngageMomentoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C262C62246876A00E48A69 /* EngageMomentoController.swift */; };
 		84C262CE224692EC00E48A69 /* EngageMomentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C262CD224692EC00E48A69 /* EngageMomentViewModel.swift */; };
+		84C262E62246CE5E00E48A69 /* APIProviderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C262E52246CE5E00E48A69 /* APIProviderConfiguration.swift */; };
+		84C262EA2246CEE900E48A69 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C262E92246CEE900E48A69 /* Product.swift */; };
+		84C262EC2246CF4500E48A69 /* Engage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C262EB2246CF4500E48A69 /* Engage.swift */; };
+		84C262F12246DE6900E48A69 /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C262F02246DE6900E48A69 /* ServerError.swift */; };
+		84C262F32246E24800E48A69 /* EngageMomentUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C262F22246E24800E48A69 /* EngageMomentUseCases.swift */; };
 		9E42114EE3EE5B9CBC7365D4 /* Pods_ios_engage_moment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7520C9FE1F70BEB50ED0612 /* Pods_ios_engage_moment.framework */; };
 		C1A9AB0874D0D21880BB6437 /* Pods_ios_engage_momentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F1100D63BC404D4CD9FCEF /* Pods_ios_engage_momentUITests.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +61,11 @@
 		84C262B82246803D00E48A69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84C262C62246876A00E48A69 /* EngageMomentoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngageMomentoController.swift; sourceTree = "<group>"; };
 		84C262CD224692EC00E48A69 /* EngageMomentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngageMomentViewModel.swift; sourceTree = "<group>"; };
+		84C262E52246CE5E00E48A69 /* APIProviderConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProviderConfiguration.swift; sourceTree = "<group>"; };
+		84C262E92246CEE900E48A69 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		84C262EB2246CF4500E48A69 /* Engage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engage.swift; sourceTree = "<group>"; };
+		84C262F02246DE6900E48A69 /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
+		84C262F22246E24800E48A69 /* EngageMomentUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngageMomentUseCases.swift; sourceTree = "<group>"; };
 		92599EF903EA68B861508E09 /* Pods-ios_engage_momentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_engage_momentUITests.debug.xcconfig"; path = "Target Support Files/Pods-ios_engage_momentUITests/Pods-ios_engage_momentUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B7520C9FE1F70BEB50ED0612 /* Pods_ios_engage_moment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_engage_moment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BE8E85D11DB4DBFA027E34 /* Pods-ios_engage_moment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_engage_moment.debug.xcconfig"; path = "Target Support Files/Pods-ios_engage_moment/Pods-ios_engage_moment.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +126,8 @@
 		84C262952246801600E48A69 /* ios_engage_moment */ = {
 			isa = PBXGroup;
 			children = (
+				84C262ED2246DB8300E48A69 /* Domain */,
+				84C262E42246CE2F00E48A69 /* NetworkPlataform */,
 				84C262C42246839800E48A69 /* Features */,
 				84C262962246801600E48A69 /* AppDelegate.swift */,
 				84C2629D2246803C00E48A69 /* Assets.xcassets */,
@@ -159,6 +171,49 @@
 				84C262CD224692EC00E48A69 /* EngageMomentViewModel.swift */,
 			);
 			path = EngageMoment;
+			sourceTree = "<group>";
+		};
+		84C262E42246CE2F00E48A69 /* NetworkPlataform */ = {
+			isa = PBXGroup;
+			children = (
+				84C262EF2246DE5500E48A69 /* Errors */,
+				84C262E52246CE5E00E48A69 /* APIProviderConfiguration.swift */,
+			);
+			path = NetworkPlataform;
+			sourceTree = "<group>";
+		};
+		84C262E82246CEDC00E48A69 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84C262E92246CEE900E48A69 /* Product.swift */,
+				84C262EB2246CF4500E48A69 /* Engage.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84C262ED2246DB8300E48A69 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				84C262EE2246DBB400E48A69 /* UseCases */,
+				84C262E82246CEDC00E48A69 /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		84C262EE2246DBB400E48A69 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				84C262F22246E24800E48A69 /* EngageMomentUseCases.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		84C262EF2246DE5500E48A69 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				84C262F02246DE6900E48A69 /* ServerError.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 		B28800FE315A0029421CDFDE /* Frameworks */ = {
@@ -419,8 +474,13 @@
 			files = (
 				84C262992246801600E48A69 /* EngageMomentViewController.swift in Sources */,
 				84C262CE224692EC00E48A69 /* EngageMomentViewModel.swift in Sources */,
+				84C262F32246E24800E48A69 /* EngageMomentUseCases.swift in Sources */,
 				84C262C72246876A00E48A69 /* EngageMomentoController.swift in Sources */,
 				84C262972246801600E48A69 /* AppDelegate.swift in Sources */,
+				84C262EC2246CF4500E48A69 /* Engage.swift in Sources */,
+				84C262F12246DE6900E48A69 /* ServerError.swift in Sources */,
+				84C262E62246CE5E00E48A69 /* APIProviderConfiguration.swift in Sources */,
+				84C262EA2246CEE900E48A69 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
