@@ -1,0 +1,6 @@
+framework module Pods_ios_engage_moment {
+  umbrella header "Pods-ios_engage_moment-umbrella.h"
+
+  export *
+  module * { export * }
+}
